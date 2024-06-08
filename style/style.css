@@ -1,0 +1,319 @@
+body {
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-text-color);
+
+    margin: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: 1158px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+/* header */
+.header {
+    border-bottom: 1px solid #e7e9fc;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding: 0 15px;
+}
+
+.main-header-container {
+    display: flex;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    gap: 40px;
+}
+
+
+
+.nav-logo {
+   
+}
+
+.logo-span {
+
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #5F3E8D;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.32px;
+    padding: 24px 0;
+}
+
+.address {
+    font-style: normal;
+    margin-left: auto;
+
+}
+
+.address-list {
+    display: flex;
+    gap: 40px;
+    padding: 24px 0;
+}
+
+.address-link {
+    text-decoration: none;
+    color: var(--contact-link-color);
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.32px;
+}
+
+.nav-link:hover,
+.address-link:hover {
+    color: var(--hover-link-color);
+}
+
+.nav-link:focus,
+.address-link:focus {
+    color: var(--hover-link-color);
+}
+
+.hero {
+    background-color: #f9f9f9;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero-title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.07;
+    letter-spacing: 1.12px;
+    color: white;
+    text-align: center;
+    margin-bottom: 48px;
+    max-width: 496px;
+}
+
+.button {
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    margin: 0 auto;
+    background-color: #4d5ae5;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    line-height: 24px;
+    letter-spacing: 0.64px;
+    padding: 16px 32px;
+    border-radius: 4px;
+    background: #4d5ae5;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.button:hover {
+    background-color: #404BBF;
+}
+
+.button:focus {
+    background-color: #404BBF;
+}
+
+/* Стили для секции "Наши преимущества" */
+.advantages-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 726px;
+    /* Ширина для трёх карточек по 222px + отступы */
+    margin: 0 auto;
+    /* Центрирование контейнера */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 222px;
+    height: 227px;
+    background-color: purple;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    color: white;
+}
+
+/* Медиазапросы для размещения карточек в два и один ряд */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 0 45%;
+        /* Две карточки в ряду при ширине экрана меньше 768px */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 0 100%;
+        /* Одна карточка в ряду при ширине экрана меньше 480px */
+    }
+}
+
+.services {
+    padding: 50px 0;
+    background-color: #f4f4f9;
+}
+
+.services-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.services-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.services-card {
+    position: relative;
+    background-color: purple;
+    border-radius: 10px;
+    width: 300px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    padding-bottom: 120px;
+    /* Adjust padding to fit image height */
+}
+
+.services-card:hover {
+    transform: translateY(-10px);
+}
+
+.services-card-content {
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.services-card-content h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.services-card-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.services-card-img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.workflow {
+    padding: 50px 0;
+    background-color: #f4f4f9;
+}
+
+.workflow-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.workflow-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.workflow-card {
+    background-color: purple;
+    border-radius: 10px;
+    width: 220px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.workflow-card img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.workflow-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.workflow-card:hover {
+    transform: translateY(-10px);
+}
