@@ -1,3 +1,15 @@
+:root {
+    --primary-color: #6A1B9A;
+    --accent-color: #8E24AA;
+    --background-color: #F5F5F5;
+    --text-color: #FFFFFF;
+    --text-dark-color: #424242;
+    --button-hover-color: #9C27B0;
+    --button-shadow-color: rgba(0, 0, 0, 0.2);
+    --contact-link-color: #5F3E8D;
+    --hover-link-color: #8E24AA;
+}
+
 body {
     background-color: #f4f4f9;
     font-family: 'Raleway' 'Roboto', sans-serif; 
@@ -60,7 +72,7 @@ img {
 
 .nav-link {
     text-decoration: none;
-    color: #5F3E8D;
+    color: var(--contact-link-color);
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
@@ -88,10 +100,7 @@ img {
 }
 
 .nav-link:hover,
-.address-link:hover {
-    color: var(--hover-link-color);
-}
-
+.address-link:hover,
 .nav-link:focus,
 .address-link:focus {
     color: var(--hover-link-color);
@@ -403,7 +412,7 @@ p {
 .partner-box p {
     margin-bottom: 20px;
     font-size: 16px;
-    color: var(--primary-color);
+    color: var(--text-color)
     /* Используйте основной цвет вашей темы */
 }
 
