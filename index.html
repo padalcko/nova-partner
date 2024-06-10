@@ -38,9 +38,15 @@
         <address class="address">
           <ul class="address-list">
             <li class="address-lis-item">
+              <img
+                src="./img/icon/phone-call.png"
+                alt="Позвонить нам"
+                width="20px"
+              />
               <a class="address-link" href="tel:+48796458722">+48796458722</a>
             </li>
             <li class="address-lis-item">
+              <img src="./img/icon/email.png" alt="Написать нам" width="20px" />
               <a class="address-link" href="mailto:rcp@rentcarproject.pl"
                 >rcp@rentcarproject.pl</a
               >
@@ -57,20 +63,21 @@
             <h1 class="hero-title">
               Доступные автомобили - наши лизинговые амбиции
             </h1>
-
-            <button class="button" type="button">Заказать услугу</button>
+            <button class="button" type="button" onclick="openForm()">
+              Заказать услугу
+            </button>
           </div>
           <div class="img-hero-box">
             <img
               class="hero-banner"
               src="./img/hero-image.png"
               alt="main image"
-              width="500px
-            "
+              width="500px"
             />
           </div>
         </div>
       </section>
+
       <!-- Advantages -->
       <section class="advantages">
         <div class="container">
@@ -183,7 +190,7 @@
         </div>
       </section>
 
-      <!-- How wee work -->
+      <!-- How we work -->
       <section class="workflow">
         <div class="container">
           <h2 class="workflow-title">Алгоритм сотрудничества</h2>
@@ -242,39 +249,189 @@
       </section>
 
       <!-- FORM -->
-      <section></section>
+      <div id="orderForm" class="form-popup">
+        <form class="form-container" id="orderFormElement">
+          <span class="close" onclick="closeForm()">&times;</span>
+          <h2>Заказать услугу</h2>
+          <label for="name"><b>Ваше имя</b></label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="phone"><b>Ваш номер телефона</b></label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <label for="email"><b>Ваш емейл</b></label>
+          <input type="email" id="email" name="email" required />
+
+          <button type="submit" class="btn">Отправить</button>
+        </form>
+      </div>
     </main>
-    <footer>
-      <a href="index.html">RENT CAR <br />PROJECT</a>
-      <address>
+    <footer class="footer">
+      <div class="container">
+        <div class="addres-box">
+          <a class="footer-logo" href="index.html" class="footer-logo"
+            >RENT CAR <br />PROJECT</a
+          >
+          <address>
+            <ul class="footer-address">
+              <li>
+                <a
+                  class="footer-address-link"
+                  href="https://www.google.com/maps/search/?api=1&query=Góralska+5,+553-610+Wrocław"
+                  target="_blank"
+                  >Góralska 5, 553-610 Wrocław</a
+                >
+              </li>
+              <li>
+                <a class="footer-address-link" href="tel:+48796458722"
+                  >+48796458722</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer-address-link"
+                  href="mailto:rcp@rentcarproject.pl"
+                  >rcp@rentcarproject.pl</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="social-box">
+          <ul class="footer-socials">
+            <li>
+              <a
+                href="https://www.instagram.com/rent_projekt?igsh=d3BtMnI3NGQ2Mmhm"
+                target="_blank"
+              >
+                <img
+                  src="./img/icon/instagram-icon.png"
+                  alt="instagram icon"
+                  width="40px"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="https://t.me/WeGetTheCar" target="_blank">
+                <img
+                  src="./img/icon/telegram-icon.png"
+                  alt="telegram icon"
+                  width="40px"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/rent_projekt?igsh=d3BtMnI3NGQ2Mmhm"
+                target="_blank"
+              >
+                <img
+                  src="./img/icon/youtube-icon.png"
+                  alt="instagram icon"
+                  width="40px"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="partner-box">
+        <p>Наши партнеры</p>
         <ul>
-          <li>Góralska 5, 553-610 Wrocław</li>
           <li>
-            <a href="tel:+48796458722">+48796458722</a>
+            <a
+              href="https://www.uber.com/pl/pl/"
+              target="_blank"
+              aria-label="Перейти на сайт Uber"
+            >
+              <img src="./img/icon/uber.png" alt="Uber" />
+            </a>
           </li>
           <li>
-            <a href="mailto:rcp@rentcarproject.pl">rcp@rentcarproject.pl</a>
+            <a
+              href="https://www.ubereats.com/pl"
+              target="_blank"
+              aria-label="Перейти на сайт Uber Eats"
+            >
+              <img src="./img/icon/uber-eats.png" alt="Uber Eats" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://bolt.eu/pl-pl/"
+              target="_blank"
+              aria-label="Перейти на сайт Bolt"
+            >
+              <img src="./img/icon/bolt-logo.png" alt="Bolt" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://bolt.eu/pl-pl/food/"
+              target="_blank"
+              aria-label="Перейти на сайт Bolt Food"
+            >
+              <img src="./img/icon/bolt_food_logo.png" alt="Bolt Food" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.free-now.com/pl/"
+              target="_blank"
+              aria-label="Перейти на сайт Free Now"
+            >
+              <img src="./img/icon/freenow.png" alt="Free Now" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://nova-partner.pl/"
+              target="_blank"
+              aria-label="Перейти на сайт Free Now"
+            >
+              <img src="./img/icon/nova-parner.png" alt="Nova Partner" />
+            </a>
           </li>
         </ul>
-      </address>
-      <ul>
-        <li>
-          <a href="https://www.instagram.com/rent_projekt?igsh=d3BtMnI3NGQ2Mmhm"
-            ><img
-              src="./img/icon/instagram-icon.png"
-              alt="instagram icon"
-              width="40px"
-          /></a>
-        </li>
-        <li>
-          <a href="https://t.me/WeGetTheCar"
-            ><img
-              src="./img/icon/telegram-icon.png"
-              alt="telegram icon"
-              width="40px"
-          /></a>
-        </li>
-      </ul>
+      </div>
     </footer>
+    <script>
+      function openForm() {
+        document.getElementById("orderForm").style.display = "flex";
+      }
+
+      function closeForm() {
+        document.getElementById("orderForm").style.display = "none";
+      }
+
+      function submitForm(event) {
+        event.preventDefault();
+        const formData = new FormData(
+          document.getElementById("orderFormElement")
+        );
+        fetch("form-handler.php", {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => response.text())
+          .then((data) => {
+            if (data === "success") {
+              alert(
+                "Спасибо за обращение, наш менеджер свяжется с вами в ближайшее время."
+              );
+              closeForm();
+            } else {
+              alert("Ошибка отправки формы. Попробуйте еще раз.");
+            }
+          })
+          .catch((error) => {
+            alert("Ошибка отправки формы. Попробуйте еще раз.");
+          });
+      }
+
+      document
+        .getElementById("orderFormElement")
+        .addEventListener("submit", submitForm);
+    </script>
   </body>
 </html>
