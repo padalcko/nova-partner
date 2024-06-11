@@ -10,10 +10,18 @@
     --hover-link-color: #8E24AA;
 }
 
+/* Основные стили */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #f4f4f9;
-    font-family: 'Raleway' 'Roboto', sans-serif; 
-    margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 ul,
@@ -33,18 +41,24 @@ p {
     margin: 0;
 }
 
+a {
+    margin: 0;
+}
+
 img {
     display: block;
     max-width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    width: 1158px;
+    max-width: 1200px;
     margin: auto;
     padding: 0 15px;
 }
 
-/* header */
+/* Стили для header */
 .header {
     border-bottom: 1px solid #e7e9fc;
     padding-top: 24px;
@@ -54,6 +68,8 @@ img {
 
 .main-header-container {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .nav-menu {
@@ -61,14 +77,19 @@ img {
     align-items: center;
 }
 
-.nav-list {
+.nav-wrapper {
     display: flex;
-    gap: 40px;
+    align-items: center;
 }
 
-.nav-logo {}
+.nav-list {
+    display: flex;
+    gap: 20px;
+}
 
-.logo-span {}
+.nav-logo {
+    margin-right: auto;
+}
 
 .nav-link {
     text-decoration: none;
@@ -111,6 +132,48 @@ img {
     gap: 5px;
 }
 
+/* Медиа-запросы для header */
+@media screen and (max-width: 900px) {
+    .main-header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-logo {
+        margin-bottom: 20px;
+    }
+
+    .nav-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .nav-link {
+        padding: 0;
+    }
+
+    .address-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .address {
+        text-align: center;
+        margin: 20px 0 0;
+    }
+}
+
+
+/* Стили для секции hero */
 .hero {
     background-color: #d809a1;
     background: linear-gradient(rgba(127, 1, 108, 0.872), rgba(144, 5, 146, 0.889));
@@ -227,6 +290,7 @@ p {
     }
 }
 
+/* Стили для секции "Наши услуги" */
 .services {
     padding: 50px 0;
     background-color: #f4f4f9;
@@ -288,6 +352,7 @@ p {
     z-index: 1;
 }
 
+/* Стили для секции "Алгоритм сотрудничества" */
 .workflow {
     padding: 50px 0;
     background-color: #f4f4f9;
@@ -332,6 +397,7 @@ p {
     transform: translateY(-10px);
 }
 
+/* Стили для footer */
 .footer {
     background-color: #800080;
     padding: 20px 0;
@@ -360,7 +426,6 @@ p {
 .footer-address {
     margin-left: 70px;
     text-align: left;
-    
 }
 
 .footer-address-link {
@@ -370,7 +435,6 @@ p {
     letter-spacing: 0.02em;
     text-decoration: none;
     font-style: normal;
-
 }
 
 .footer-address li {
@@ -386,6 +450,7 @@ p {
 .footer-socials a:hover {
     color: #ddd;
 }
+
 .social-box {
     font-display: flex;
 }
@@ -399,11 +464,13 @@ p {
     padding-top: 30px;
     margin-right: 50px;
 }
+
 .footer-socials img {
     width: 40px;
     height: auto;
 }
 
+/* Стили для секции "Наши партнеры" */
 .partner-box {
     text-align: center;
     margin: 40px 0;
@@ -412,7 +479,7 @@ p {
 .partner-box p {
     margin-bottom: 20px;
     font-size: 16px;
-    color: var(--text-color)
+    color: var(--text-color);
     /* Используйте основной цвет вашей темы */
 }
 
@@ -438,7 +505,7 @@ p {
     object-fit: contain;
 }
 
-/* Form Styles */
+/* Стили для формы */
 .form-popup {
     display: none;
     position: fixed;
