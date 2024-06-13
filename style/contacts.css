@@ -175,236 +175,84 @@ img {
     .address {
         text-align: center;
         margin: auto;
-        
+
     }
 }
+/* Стили Контакты  */
 
+.contact-section {
+    padding: 50px;
+    background-color: var(--background-color);
+}
 
-/* Стили для секции hero */
-.hero {
-    background-color: #d809a1;
-    background: linear-gradient(rgba(127, 1, 108, 0.872), rgba(144, 5, 146, 0.889));
-    position: relative;
-    background-position: center;
-    background-size: cover;
-    margin-bottom: 40px;
+.contact-section h2 {
     text-align: center;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    margin-bottom: 20px;
 }
 
-.hero-container {
+.contact-info {
+    margin: auto;
+    text-align: left;
+    margin-bottom: 40px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+
 }
 
-.hero-title {
-    font-size: 56px;
-    font-weight: 700;
-    line-height: 1.07;
-    letter-spacing: 1.12px;
-    color: white;
-    text-align: start;
-    margin-bottom: 48px;
-    max-width: 496px;
-}
-
-.button {
-    display: block;
-    min-width: 169px;
-    height: 56px;
-    border: none;
-    margin: 0 auto;
-    background-color: #ffffff;
-    color: #800080;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    line-height: 24px;
-    letter-spacing: 0.64px;
-    padding: 16px 32px;
-    border-radius: 4px;
-    background: #fff;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+.contact-info p {
+    margin: 10px 0;
     text-transform: uppercase;
 }
 
-.button:hover {
-    background-color: #E0E0E0;
+.contact-info a {
+    text-decoration: none;
+    font-style: normal;
+    text-transform: uppercase;
+    color: var(--accent-color);
 }
 
-.button:focus {
-    background-color: #E0E0E0;
-}
-
-/* Стили для секции "Наши преимущества" */
-.advantages-title {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 726px;
+.contact-form {
+    max-width: 600px;
     margin: 0 auto;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 222px;
-    height: 227px;
-    background-color: purple;
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.card-content {
+    background: var(--background-color);
     padding: 20px;
-    position: relative;
-    z-index: 2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-img {
-    max-width: 100%;
-}
-
-p {
-    color: white;
-}
-
-/* Медиазапросы для размещения карточек в два и один ряд */
-@media (max-width: 768px) {
-    .card {
-        flex: 1 0 45%;
-    }
-}
-
-@media (max-width: 480px) {
-    .card {
-        flex: 1 0 100%;
-    }
-
-}
-
-/* Стили для секции "Наши услуги" */
-.services {
-    padding: 50px 0;
-    background-color: #f4f4f9;
-}
-
-.services-title {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 50px;
-}
-
-.services-card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.services-card {
-    position: relative;
-    background-color: purple;
-    border-radius: 10px;
-    width: 300px;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s;
-    padding-bottom: 120px;
-}
-
-.services-card:hover {
-    transform: translateY(-10px);
-}
-
-.services-card-content {
-    padding: 20px;
-    position: relative;
-    z-index: 2;
-}
-
-.services-card-content h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.services-card-content p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-.services-card-img {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+.contact-form input,
+.contact-form textarea {
     width: 100%;
-    height: auto;
-    z-index: 1;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-/* Стили для секции "Алгоритм сотрудничества" */
-.workflow {
-    padding: 50px 0;
-    background-color: #f4f4f9;
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.workflow-title {
+.contact-form button:hover {
+    background-color: var(--button-hover-color);
+}
+
+.map-frame {
     text-align: center;
-    font-size: 36px;
-    margin-bottom: 50px;
+    margin-top: 20px;
 }
 
-.workflow-card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+.map-frame iframe {
+    border: 0;
+    width: 100%;
+    height: 300px;
 }
 
-.workflow-card {
-    background-color: purple;
-    border-radius: 10px;
-    width: 220px;
-    padding: 20px;
-    color: white;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.workflow-card img {
-    width: 60px;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.workflow-card p {
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.workflow-card:hover {
-    transform: translateY(-10px);
-}
 
 /* Стили для footer */
 .footer {
@@ -527,82 +375,22 @@ p {
         flex-direction: column;
         text-align: center;
     }
+
     .footer-logo {
         align-items: center;
         text-align: center;
     }
+
     .address {
         display: flex;
     }
+
     .footer-socials {
         margin: auto;
     }
-    .footer-address   {
+
+    .footer-address {
         margin: auto;
-        }
-  
-}
+    }
 
-/* Стили для формы */
-.form-popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-.form-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    position: relative;
-}
-
-.form-container h2 {
-    margin-bottom: 20px;
-}
-
-.form-container label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-.form-container input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.form-container .btn {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.form-container .btn.cancel {
-    background-color: #f44336;
-    margin-top: 10px;
-}
-
-.form-container .btn:hover {
-    opacity: 0.8;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
 }
