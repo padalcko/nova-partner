@@ -18,43 +18,68 @@
   </head>
   <body>
     <header class="header">
-      <div class="container main-header-container">
-        <nav class="nav-menu">
-          <div class="nav-wrapper">
-            <a class="nav-logo" href="index.html"
-              ><img src="./img/main-logo.png" alt="main logo" width="90px"
-            /></a>
-            <ul class="nav-list">
-              <li class="nav-list-item">
-                <a class="nav-link" href="./index.html">RentCar</a>
-              </li>
-              <li class="nav-list-item">
-                <a class="nav-link" href="">Наши авто</a>
-              </li>
-              <li class="nav-list-item">
-                <a class="nav-link" href="./contacts.html">Контакты</a>
-              </li>
-            </ul>
-          </div>
+      <div class="container header__container">
+        <div class="header__logo-container">
+          <a class="header__logo-link" href="index.html">
+            <img
+              class="header__logo"
+              src="./img/main-logo.png"
+              alt="main logo"
+              width="90px"
+            />
+          </a>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="./index.html">RentCar</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="./gallery.html">Наши авто</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="./contacts.html">Контакты</a>
+            </li>
+          </ul>
         </nav>
-        <address class="address">
-          <ul class="address-list">
-            <li class="address-lis-item">
+        <address class="header__address">
+          <ul class="header__contact-list">
+            <li class="header__contact-item">
               <img
+                class="header__contact-icon"
                 src="./img/icon/phone-call.png"
                 alt="Позвонить нам"
                 width="20px"
               />
-              <a class="address-link" href="tel:+48796458722">+48796458722</a>
+              <a class="header__contact-link" href="tel:+48796458722"
+                >+48796458722</a
+              >
             </li>
-            <li class="address-lis-item">
-              <img src="./img/icon/email.png" alt="Написать нам" width="20px" />
-              <a class="address-link" href="mailto:rcp@rentcarproject.pl"
+            <li class="header__contact-item">
+              <img
+                class="header__contact-icon"
+                src="./img/icon/email.png"
+                alt="Написать нам"
+                width="20px"
+              />
+              <a
+                class="header__contact-link"
+                href="mailto:rcp@rentcarproject.pl"
                 >rcp@rentcarproject.pl</a
               >
             </li>
           </ul>
         </address>
+        <div class="header__burger" onclick="toggleBurgerMenu()">☰</div>
+      </div>
+      <div class="header__burger-menu">
+        <a class="header__menu-link" href="./index.html">Rent Car</a>
+        <a class="header__menu-link" href="#">Наши авто</a>
+        <a class="header__menu-link" href="./contacts.html">Контакты</a>
+        <a class="header__contact-link" href="tel:+48796458722">+48796458722</a>
+        <a class="header__contact-link" href="mailto:rcp@rentcarproject.pl"
+          >rcp@rentcarproject.pl</a
+        >
       </div>
     </header>
     <main>
@@ -395,6 +420,12 @@
         </ul>
       </div>
     </footer>
+    <script>
+      function toggleBurgerMenu() {
+        const menu = document.querySelector(".header__burger-menu");
+        menu.classList.toggle("show");
+      }
+    </script>
     <script>
       function openForm() {
         document.getElementById("orderForm").style.display = "flex";
