@@ -72,6 +72,7 @@ img {
     align-items: center;
     justify-content: space-between;
     position: relative;
+    z-index: 10;
 }
 
 .header__container {
@@ -161,19 +162,20 @@ img {
         display: block;
         cursor: pointer;
         margin-left: auto;
-        }
+    }
 
     .header__burger-menu {
         display: none;
         flex-direction: column;
-        align-items: flex-centr;
+        align-items: flex-center;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
         background-color: #f4f4f4;
-        padding: 5px;
+        padding: 15px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 20;
     }
 
     .header__burger-menu a {
@@ -202,8 +204,6 @@ img {
         display: block;
     }
 }
-
-
 
 
 /* Стили для footer */
@@ -320,8 +320,6 @@ img {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-
 @media (max-width: 400px) {
     .footer .container {
         flex-direction: column;
@@ -344,5 +342,4 @@ img {
     .footer-address {
         margin: auto;
     }
-
 }

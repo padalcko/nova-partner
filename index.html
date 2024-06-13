@@ -416,12 +416,7 @@
         </ul>
       </div>
     </footer>
-    <script>
-      function toggleBurgerMenu() {
-        const menu = document.querySelector(".header__burger-menu");
-        menu.classList.toggle("show");
-      }
-    </script>
+
     <script>
       function openForm() {
         document.getElementById("orderForm").style.display = "flex";
@@ -459,6 +454,11 @@
       document
         .getElementById("orderFormElement")
         .addEventListener("submit", submitForm);
+
+      function toggleBurgerMenu() {
+        const menu = document.querySelector(".header__burger-menu");
+        menu.classList.toggle("show");
+      }
     </script>
   </body>
 </html>
