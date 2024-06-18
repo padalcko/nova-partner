@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Card Grid</title>
+    <style>
+      :root {
+        --primary-color: #6a1b9a;
+        --accent-color: #8e24aa;
+        --background-color: #f5f5f5;
+        --text-color: #ffffff;
+        --text-dark-color: #424242;
+        --button-hover-color: #9c27b0;
+        --button-shadow-color: rgba(0, 0, 0, 0.2);
+        --contact-link-color: #5f3e8d;
+        --hover-link-color: #8e24aa;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: var(--background-color);
+        margin: 0;
+      }
+      .gallery__grid-container {
+        display: grid;
+        gap: 20px;
+        max-width: 1000px;
+        padding: 20px;
+      }
+      @media (max-width: 500px) {
+        .gallery__grid-container {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (min-width: 500px) and (max-width: 700px) {
+        .gallery__grid-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (min-width: 700px) {
+        .gallery__grid-container {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      .gallery__card {
+        position: relative;
+        width: 100%;
+        border: 1px solid var(--primary-color);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px var(--button-shadow-color);
+        transition: transform 0.3s ease;
+        background-color: var(--text-color);
+      }
+      .gallery__card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px var(--button-shadow-color);
+      }
+      .gallery__card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .gallery__card-content {
+        padding: 15px;
+        text-align: center;
+        color: var(--text-dark-color);
+      }
+      .gallery__card-title {
+        margin: 10px 0;
+        font-size: 24px;
+      }
+      .gallery__card-text {
+        margin: 5px 0;
+        color: var(--text-dark-color);
+      }
+      .gallery__card-links {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .gallery__card-link {
+        display: inline-block;
+        padding: 10px 15px;
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .gallery__card-link:hover {
+        background-color: var(--button-hover-color);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery__grid-container">
+      <div class="gallery__card">
+        <img
+          src="./img/auto/prius-30-1/Prius-30-card-title.jpg"
+          alt="Car Image"
+        />
+        <div class="gallery__card-content">
+          <h2 class="gallery__card-title">🚗Toyota Prius 30 1,5</h2>
+          <p class="gallery__card-text">📅 Год выпуска: 2008</p>
+          <p class="gallery__card-text">🔋Топливо: Гибрид Газ Бензин</p>
+          <div class="gallery__card-links">
+            <a href="#" class="gallery__card-link">Аренда</a>
+            <a href="#" class="gallery__card-link">Лизинг</a>
+          </div>
+        </div>
+      </div>
+      <div class="gallery__card">
+        <img
+          src="./img/auto/prius-plus-1/prius-plus-card-title.jpg"
+          alt="Car Image"
+        />
+        <div class="gallery__card-content">
+          <h2 class="gallery__card-title">🚗Toyota Prius Plus 1.8</h2>
+          <p class="gallery__card-text">📅Год выпуска: 2016</p>
+          <p class="gallery__card-text">🔋Топливо: Гибрид Газ Бензин</p>
+          <div class="gallery__card-links">
+            <a href="#" class="gallery__card-link">Аренда</a>
+            <a href="#" class="gallery__card-link">Лизинг</a>
+          </div>
+        </div>
+      </div>
+      <div class="gallery__card">
+        <img
+          src="./img/auto/prius-40-1/prius-40-card-title.jpg"
+          alt="Car Image"
+        />
+        <div class="gallery__card-content">
+          <h2 class="gallery__card-title">🚗Toyota Prius 40 1.8</h2>
+          <p class="gallery__card-text">📅Год выпуска: 2016</p>
+          <p class="gallery__card-text">🔋Топливо: Гибрид Газ Бензин</p>
+          <div class="gallery__card-links">
+            <a href="#" class="gallery__card-link">Аренда</a>
+            <a href="#" class="gallery__card-link">Лизинг</a>
+          </div>
+        </div>
+      </div>
+      <div class="gallery__card">
+        <img src="./img/auto/auris-1/auris-card-title.jpg" alt="Car Image" />
+        <div class="gallery__card-content">
+          <h2 class="gallery__card-title">🚗Toyota Auris 1,8</h2>
+          <p class="gallery__card-text">📅Год выпуска: 2015</p>
+          <p class="gallery__card-text">🔋Топливо: Гибрид Газ Бензин</p>
+          <div class="gallery__card-links">
+            <a href="#" class="gallery__card-link">Аренда</a>
+            <a href="#" class="gallery__card-link">Лизинг</a>
+          </div>
+        </div>
+      </div>
+      <div class="gallery__card">
+        <img src="car-image5.jpg" alt="Car Image" />
+        <div class="gallery__card-content">
+          <h2 class="gallery__card-title">Car Model 5</h2>
+          <p class="gallery__card-text">Year: 2017</p>
+          <p class="gallery__card-text">Mileage: 50,000 km</p>
+          <div class="gallery__card-links">
+            <a href="#" class="gallery__card-link">Аренда</a>
+            <a href="#" class="gallery__card-link">Лизинг</a>
+          </div>
+        </div>
+      </div>
+      <div class="gallery__card">
+        <img src="car-image6.jpg" alt="Car Image" />
+        <div class="gallery__card-content">
+          <h2 class="gallery__card-title">Car Model 6</h2>
+          <p class="gallery__card-text">Year: 2016</p>
+          <p class="gallery__card-text">Mileage: 60,000 km</p>
+          <div class="gallery__card-links">
+            <a href="#" class="gallery__card-link">Аренда</a>
+            <a href="#" class="gallery__card-link">Лизинг</a>
+          </div>
+        </div>
+      </div>
+      <div class="gallery__card">
+        <img src="car-image7.jpg" alt="Car Image" />
+        <div class="gallery__card-content">
+          <h2 class="gallery__card-title">Car Model 7</h2>
+          <p class="gallery__card-text">Year: 2015</p>
+          <p class="gallery__card-text">Mileage: 70,000 km</p>
+          <div class="gallery__card-links">
+            <a href="#" class="gallery__card-link">Аренда</a>
+            <a href="#" class="gallery__card-link">Лизинг</a>
+          </div>
+        </div>
+      </div>
+      <div class="gallery__card">
+        <img src="car-image8.jpg" alt="Car Image" />
+        <div class="gallery__card-content">
+          <h2 class="gallery__card-title">Car Model 8</h2>
+          <p class="gallery__card-text">Year: 2014</p>
+          <p class="gallery__card-text">Mileage: 80,000 km</p>
+          <div class="gallery__card-links">
+            <a href="#" class="gallery__card-link">Аренда</a>
+            <a href="#" class="gallery__card-link">Лизинг</a>
+          </div>
+        </div>
+      </div>
+      <div class="gallery__card">
+        <img src="car-image9.jpg" alt="Car Image" />
+        <div class="gallery__card-content">
+          <h2 class="gallery__card-title">Car Model 9</h2>
+          <p class="gallery__card-text">Year: 2013</p>
+          <p class="gallery__card-text">Mileage: 90,000 km</p>
+          <div class="gallery__card-links">
+            <a href="#" class="gallery__card-link">Аренда</a>
+            <a href="#" class="gallery__card-link">Лизинг</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
