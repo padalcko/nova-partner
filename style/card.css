@@ -216,7 +216,13 @@ img {
 .benefits-title {
     margin-bottom: 10px;
 }
-
+  @media (max-width: 800px) {
+      .benefits-container {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+      }
+  }
 /* Стили для footer */
 .footer {
     background-color: #800080;
