@@ -341,7 +341,7 @@ img {
 .slides img {
     width: 100%;
     max-width: 100%;
-    height: auto;
+    height: 30%;
     flex-shrink: 0;
     object-fit: contain;
     cursor: pointer;

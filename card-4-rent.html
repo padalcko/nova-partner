@@ -3,18 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
-    />
-    <link rel="stylesheet" href="./style/gallery.css" />
-    <title>Our cars</title>
+    <title>Лизинг авто</title>
+    <link rel="stylesheet" href="./style/card.css" />
   </head>
   <body>
     <header class="header">
@@ -82,138 +72,61 @@
         >
       </div>
     </header>
+
     <main>
-      <div class="gallery__grid-container">
-        <div class="gallery__card">
-          <img
-            src="./img/auto/prius-30-1/Prius-30-card-title.jpg"
-            alt="Image of Toyota Prius 30 1.5"
-          />
-          <div class="gallery__card-content">
-            <h2 class="gallery__card-title">🚗 Toyota Prius 30 1.5</h2>
-            <p class="gallery__card-text">📅 Год: 2008</p>
-            <p class="gallery__card-text">🔋 Топливо: Гибрид, бензин, газ</p>
-            <div class="gallery__card-links">
-              <a href="./card-1-rent.html" class="gallery__card-link">Аренда</a>
-              <a href="./card-1-lease.html" class="gallery__card-link"
-                >Лизинг</a
-              >
+      <section>
+        <div class="container slider__image-container">
+          <div class="slider">
+            <button class="arrow arrow-left">&#10094;</button>
+            <div class="slides">
+              <img src="./img/auto/auris-1/auris-1.JPG" alt="Image 1" />
+              <img src="./img/auto/auris-1/auris-2.JPG" alt="Image 2" />
+              <img src="./img/auto/auris-1/auris-3.JPG" alt="Image 3" />
+              <img src="./img/auto/auris-1/auris-4.JPG" alt="Image 4" />
+              <img src="./img/auto/auris-1/auris-5.JPG" alt="Image 5" />
+              <img src="./img/auto/auris-1/auris-6.JPG" alt="Image 6" />
+              <img src="./img/auto/auris-1/auris-7.JPG"alt="Image 7" />
+            </div>
+            <button class="arrow arrow-right">&#10095;</button>
+          </div>
+
+          <!-- Модальное окно для увеличенного изображения -->
+          <div class="modal">
+            <img src="" alt="Large Image" />
+          </div>
+        </div>
+      </section>
+
+      <section >
+          <div class="container benefits-container">
+            <div class="haracteristics">
+              <ul>
+                <li><h3 class="benefits-title">Преимущества</h3></li>
+                <li>🚗 Отсутствие крупных первоначальных вложений</li>
+                <li>🚗 Включенные расходы на обслуживание и ремонт</li>
+                <li>🚗 Гибкость в выборе автомобиля</li>
+                <li>🚗 Обновление автопарка</li>
+                <li>🚗 Налоговые льготы</li>
+                <li>🚗 Бесперебойная работа</li>
+              </ul>
+            </div>
+
+            <div class="benefits">
+              <ul>
+                <li><h3 class="benefits-title">Преимущества</h3></li>
+                <li>🚗 Меньшие ежемесячные платежи</li>
+                <li>🚗 Возможность выкупа авто</li>
+                <li>🚗 Низкий первоначальный взнос</li>
+                <li>🚗 Новые авто с гарантией</li>
+                <li>🚗 Налоговые льготы</li>
+                <li>🚗 Регулярное обновление авто</li>
+              </ul>
             </div>
           </div>
         </div>
-        <div class="gallery__card">
-          <img
-            src="./img/auto/prius-plus-1/prius-plus-card-title.jpg"
-            alt="Image of Toyota Prius Plus 1.8"
-          />
-          <div class="gallery__card-content">
-            <h2 class="gallery__card-title">🚗 Toyota Prius Plus</h2>
-            <p class="gallery__card-text">📅 Год 2016</p>
-            <p class="gallery__card-text">🔋 Топливо: Гибрид, бензин, газ</p>
-            <div class="gallery__card-links">
-              <a href="./card-2-rent.html" class="gallery__card-link">Аренда</a>
-              <a href="./card-2-lease.html" class="gallery__card-link"
-                >Лизинг</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="gallery__card">
-          <img
-            src="./img/auto/prius-40-1/prius-40-card-title.jpg"
-            alt="Image of Toyota Prius 40 1.8"
-          />
-          <div class="gallery__card-content">
-            <h2 class="gallery__card-title">🚗 Toyota Prius 40 1.8</h2>
-            <p class="gallery__card-text">📅 Год: 2016</p>
-            <p class="gallery__card-text">🔋 Топливо: Гибрид, бензин, газ</p>
-            <div class="gallery__card-links">
-              <a href="./card-3-rent.html" class="gallery__card-link">Аренда</a>
-              <a href="./card-3-lease.html" class="gallery__card-link"
-                >Лизинг</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="gallery__card">
-          <img
-            src="./img/auto/auris-1/auris-card-title.jpg"
-            alt="Image of Toyota Auris 1.8"
-          />
-          <div class="gallery__card-content">
-            <h2 class="gallery__card-title">🚗 Toyota Auris 1.8</h2>
-            <p class="gallery__card-text">📅 Год: 2015</p>
-            <p class="gallery__card-text">🔋 Топливо: Гибрид, бензин, газ</p>
-            <div class="gallery__card-links">
-              <a href="./card-4-rent.html" class="gallery__card-link">Аренда</a>
-              <a href="./card-4-lease.html" class="gallery__card-link"
-                >Лизинг</a
-              >
-            </div>
-          </div>
-        </div>
-        <!--         <div class="gallery__card">
-          <img src="car-image5.jpg" alt="Image of car model 5" />
-          <div class="gallery__card-content">
-            <h2 class="gallery__card-title">Car Model 5</h2>
-            <p class="gallery__card-text">📅 Year: 2017</p>
-            <p class="gallery__card-text">🔋Mileage: 50,000 km</p>
-            <div class="gallery__card-links">
-              <a href="#" class="gallery__card-link">Rent</a>
-              <a href="#" class="gallery__card-link">Lease</a>
-            </div>
-          </div>
-        </div>
-        <div class="gallery__card">
-          <img src="car-image6.jpg" alt="Image of car model 6" />
-          <div class="gallery__card-content">
-            <h2 class="gallery__card-title">Car Model 6</h2>
-            <p class="gallery__card-text">📅 Year: 2016</p>
-            <p class="gallery__card-text">🔋Mileage: 60,000 km</p>
-            <div class="gallery__card-links">
-              <a href="#" class="gallery__card-link">Rent</a>
-              <a href="#" class="gallery__card-link">Lease</a>
-            </div>
-          </div>
-        </div>
-        <div class="gallery__card">
-          <img src="car-image7.jpg" alt="Image of car model 7" />
-          <div class="gallery__card-content">
-            <h2 class="gallery__card-title">Car Model 7</h2>
-            <p class="gallery__card-text">📅 Year: 2015</p>
-            <p class="gallery__card-text">🔋Mileage: 70,000 km</p>
-            <div class="gallery__card-links">
-              <a href="#" class="gallery__card-link">Rent</a>
-              <a href="#" class="gallery__card-link">Lease</a>
-            </div>
-          </div>
-        </div>
-        <div class="gallery__card">
-          <img src="car-image8.jpg" alt="Image of car model 8" />
-          <div class="gallery__card-content">
-            <h2 class="gallery__card-title">Car Model 8</h2>
-            <p class="gallery__card-text">📅 Year: 2014</p>
-            <p class="gallery__card-text">🔋Mileage: 80,000 km</p>
-            <div class="gallery__card-links">
-              <a href="#" class="gallery__card-link">Rent</a>
-              <a href="#" class="gallery__card-link">Lease</a>
-            </div>
-          </div>
-        </div>
-        <div class="gallery__card">
-          <img src="car-image9.jpg" alt="Image of car model 9" />
-          <div class="gallery__card-content">
-            <h2 class="gallery__card-title">Car Model 9</h2>
-            <p class="gallery__card-text">📅 Year: 2013</p>
-            <p class="gallery__card-text">🔋Mileage: 90,000 km</p>
-            <div class="gallery__card-links">
-              <a href="#" class="gallery__card-link">Rent</a>
-              <a href="#" class="gallery__card-link">Lease</a>
-            </div>
-          </div>
-        </div> -->
-      </div>
+      </section>
     </main>
+
     <footer class="footer">
       <div class="container">
         <div class="address-box">
@@ -282,7 +195,7 @@
         </div>
       </div>
       <div class="partner-box">
-        <p class="partner-txt">Our partners</p>
+        <p class="partner-txt">Наши партнеры</p>
         <ul>
           <li>
             <a
@@ -343,6 +256,46 @@
     </footer>
 
     <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const slides = document.querySelector(".slides");
+        const images = slides.querySelectorAll("img");
+        const arrowLeft = document.querySelector(".arrow-left");
+        const arrowRight = document.querySelector(".arrow-right");
+        const modal = document.querySelector(".modal");
+        const modalImg = modal.querySelector("img");
+        let currentIndex = 0;
+
+        function showNextImage() {
+          currentIndex = (currentIndex + 1) % images.length;
+          updateSlidePosition();
+        }
+
+        function showPrevImage() {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          updateSlidePosition();
+        }
+
+        function updateSlidePosition() {
+          slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function openModal(event) {
+          modalImg.src = event.target.src;
+          modal.style.display = "flex";
+        }
+
+        function closeModal() {
+          modal.style.display = "none";
+        }
+
+        images.forEach((img) => img.addEventListener("click", openModal));
+        modal.addEventListener("click", closeModal);
+        arrowLeft.addEventListener("click", showPrevImage);
+        arrowRight.addEventListener("click", showNextImage);
+
+        setInterval(showNextImage, 5000);
+      });
+
       function toggleBurgerMenu() {
         const menu = document.querySelector(".header__burger-menu");
         menu.classList.toggle("show");
