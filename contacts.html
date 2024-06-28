@@ -92,7 +92,7 @@
         <p>Email: <a href="mailto:rcp@rentcarproject.pl">rcp@rentcarproject.pl</a></p>
     </div>
         <div class="contact-form">
-          <form action="#" method="post">
+          <form action="./form-handler.php" method="post">
             <input type="text" name="name" placeholder="Ваше Имя" required />
             <input type="email" name="email" placeholder="Ваш Email" required />
             <textarea
@@ -248,6 +248,28 @@
     </footer>
 
        <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    fetch('form-handler.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+      document.querySelector('.contact-form').style.display = 'none';
+      const responseMessage = document.getElementById('responseMessage');
+      responseMessage.style.display = 'block';
+      responseMessage.innerHTML = data;
+      setTimeout(() => {
+        window.location.href = 'index.php'; // измените на ваш главный URL
+      }, 3000);
+    })
+    .catch(error => {
+      alert('Ошибка отправки формы. Попробуйте еще раз.');
+    });
+  });
+  
       function toggleBurgerMenu() {
         const menu = document.querySelector(".header__burger-menu");
         menu.classList.toggle("show");
